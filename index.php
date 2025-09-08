@@ -6,6 +6,7 @@
     <title>Landing Page</title>
 </head>
 <body>
-    <h1>hi</h1>
+    <button><a href="about.html">About</a></button>
+    <button><a href="contact.html">Contact</a></button>
 </body>
 </html>
