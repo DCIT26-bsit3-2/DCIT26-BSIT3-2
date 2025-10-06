@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Students = ({ name, number, age, course, year }) => {
   return (
     <div className="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700 text-center">
