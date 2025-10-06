@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import Header from './assets/components/Header.jsx'
+import Card from './assets/components/Card.jsx'
+import Students from './assets/components/Students.jsx'
+import Footer from './assets/components/Footer.jsx' 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <><div className='flex flex-col h-screen justify-between'>
+    <Header />
+    <div className='flex flex-wrap justify-center gap-4'>
+    <Students name="Lenerd Mcgowan" studnum="202300951" age="20" course="BSIT" year="3rd year" />
+    <Students name="Jommel Quilon" studnum="202300950" age="22" course="BSIT" year="3rd year" />
+    <Students name="Nico Acosta" studnum="202300871" age="19" course="BSIT" year="3rd year" />
+    <Students name="Geoffrey Soriano" studnum="202301951" age="25" course="BSIT" year="3rd year" />
+    <Students name="MJ DelosSantos" studnum="202300153" age="20" course="BSIT" year="3rd year" />
+    </div>
+    <Card />
+    <Footer />
+    </div>
     </>
-  )
+    )
 }
 
 export default App
