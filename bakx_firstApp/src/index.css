@@ -1,0 +1,30 @@
+
+.marquee-container {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	box-sizing: border-box;
+	border: none;
+	margin: 20px 0;
+}
+
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-content > * {
+	display: inline-block;
+	margin-right: 40px;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
