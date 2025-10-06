@@ -1,33 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './assets/components/Header.jsx'
+import Footer from './assets/components/Footer.jsx'
+import Students from './assets/components/Students.jsx'
+import Cards from './assets/components/Cards.jsx'
+
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div classname="bg-gray-400">
+      <Header />
+      
+      <div className="flex flex-wrap justify-center   p-4 gap-4">
+      <Students 
+        name = "Kian Lhei"
+        number = "202301095"
+        age = "19"
+        course = "BSIT"
+        year = "3rd Year"
+
+
+      />
+
+      <Students 
+        name = "Chars Sampaga"
+        number = "202322222"
+        age = "20"
+        course = "BSIT"
+        year = "3rd Year"
+
+        
+      />
+
+      <Students 
+        name = "Jimuel Clidoro"
+        number = "202301095"
+        age = "19"
+        course = "BSIT"
+        year = "3rd Year"
+
+        
+      />
+
+      <Students 
+        name = "Jesmon Javier"
+        number = "202301095"
+        age = "19"
+        course = "BSIT"
+        year = "3rd Year"
+
+        
+      />
+
+      <Students 
+        name = "Mike Casaverde"
+        number = "202301095"
+        age = "19"
+        course = "BSIT"
+        year = "3rd Year"
+
+        
+      />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      
+      
+      <Cards />
+     
+
+      <Footer />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
