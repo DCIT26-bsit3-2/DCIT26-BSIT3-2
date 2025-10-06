@@ -1,34 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import Header from './assets/components/Header.jsx'
+import Footer from './assets/components/Footer.jsx'
+import Students from './assets/components/Students.jsx'
+import Cards from './assets/components/Cards.jsx'
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   <>
+   <div className='bg-gray-400'>
+   <Header/>
+   
+   <div className='flex bg-gray-400' >
+   <Students
+    name="Charls Sampaga"
+    number="202302222"
+    age={19}
+    year={3}
+    />
+
+    <Students
+    name="Mike Casaverde"
+    number="202301234"
+    age={20}
+    year={4}
+    />
+
+    <Students
+    name="Kian Pagkaliwagan"
+    number="202303456"
+    age={19}
+    year={2}
+    />
+
+    <Students
+    name="Jimuel Clidoro"
+    number="202301238"
+    age={20}
+    year={3}
+    />
+
+    <Students
+    name="Mhar Granado"
+    number="202300134"
+    age={19}
+    year={1}
+    />
+    </div>  
+   
+   <Cards/>
+   <Footer/>
+   </div>
+   </>
+   
   )
 }
 
