@@ -14,7 +14,7 @@ function App() {
       <Students name="Jherecho Pilorin" number="201310837" age="27" course="BSCS" year="2" />  
       <Students name="Jesmon Javier" number="201310838" age="26" course="BSIT" year="1" />  
       <Students name="Jin Macol" number="201310839" age="25" course="BSDM" year="4" />  
-      <Students name="Mariam Daud" number="201310840" age="24" course="BSBio" year="2" />    
+      <Students name="Marian Daud" number="201310840" age="24" course="BSBio" year="2" />    
       </div>
       <Card />  
       <Footer />
