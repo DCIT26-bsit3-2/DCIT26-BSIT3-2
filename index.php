@@ -6,7 +6,7 @@
     <title>Landing Page</title>
 </head>
 <body>
-    <button><a href="about.html">About</a></button>
+    <button><a href="about.html">modififed About</a></button>
     <button><a href="contact.html">Contact</a></button>
 </body>
 </html>
