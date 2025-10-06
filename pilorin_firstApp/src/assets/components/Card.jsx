@@ -2,10 +2,8 @@ import React from "react";
 
 const professor = {
     name: "John Amiel Pena",
-    email: "jherecho.pilorin@example.com",
+    email: "johnAmiel@example.com",
     subject: "Application Development",
-    course: "BSIT",
-    year: "3rd Year",
 }
 
 function Card() {
