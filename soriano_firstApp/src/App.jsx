@@ -1,35 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import "./App.css";
+import Header from "./assets/components/Header.jsx";
+import Footer from "./assets/components/Footer.jsx";
+import Card from "./assets/components/Card.jsx";
+import Students from "./assets/components/Students.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <body className="min-h-screen flex-row">
+            <Header />
+            <div className="flex justify-between m-10 p-10">
+                <Students
+                    name="Geoffrey Soriano"
+                    studnum="202301671"
+                    yrLevel="3rd Year"
+                    age="20"
+                    course="BSIT"
+                />
+                <Students
+                    name="Geoffrey Soriano"
+                    studnum="202301671"
+                    yrLevel="3rd Year"
+                    age="20"
+                    course="BSIT"
+                />
+                <Students
+                    name="Jane Doe"
+                    studnum="202301672"
+                    yrLevel="3rd Year"
+                    age="20"
+                    course="BSIT"
+                />
+                <Students
+                    name="John Smith"
+                    studnum="202301673"
+                    yrLevel="3rd Year"
+                    age="21"
+                    course="BSIT"
+                />
+                <Students
+                    name="Alice Johnson"
+                    studnum="202301674"
+                    yrLevel="3rd Year"
+                    age="19"
+                    course="BSIT"
+                />
+            </div>
+            <Card />
+            <Footer />
+        </body>
+    );
 }
 
-export default App
+export default App;
