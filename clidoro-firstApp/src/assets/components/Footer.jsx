@@ -1,16 +1,11 @@
 import React from 'react';
 
-
 function Footer() {
-
   return (
-    <>
-    <div className="footer">
-        <p>© 2024 My Application. All rights reserved.</p>
-    </div>{
-    }
-    </>
-  )
+    <footer className="text-center flex flex-col items-center p-4 text-white bg-gray-800">
+      <p>Cavite State University</p>
+    </footer>
+  );
 }
 
 export default Footer;
