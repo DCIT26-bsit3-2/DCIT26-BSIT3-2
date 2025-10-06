@@ -1,34 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './assets/components/Header.jsx'
+import Footer from './assets/components/Footer.jsx'
+import Students from './assets/components/Students.jsx'
+import Cards from './assets/components/Card.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   <>
+   <div className='flex justify between flex-col min-h-screen'>
+
+      <Header />
+        <div className='flex flex-wrap justify-center'>
+          <Students 
+          name="Mark Joshua A. Delos Santos" number="202301579" age="20" course="BSIT" year="3rd year"
+          />
+          <Students 
+          name="Geoffrey D. Soriano" number="202301671" age="20" course="BSIT" year="3rd year"
+          />
+          <Students 
+          name="Allen James Nico D. Acosta" number="202301579" age="20" course="BSIT" year="3rd year"
+          />
+          <Students 
+          name="Lenerd A. McGowan" number="202300951" age="19" course="BSIT" year="3rd year"
+          />
+          <Students 
+          name="Jommel Quilon" number="202301234" age="20" course="BSIT" year="3rd year"
+          />
+        </div>
+
+        <div className='flex flex-wrap justify-center'>
+          <Cards />
+        </div>
+
+        <Footer />
+    </div>
+   </>
   )
 }
 
