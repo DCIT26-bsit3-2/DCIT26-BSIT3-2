@@ -1,23 +1,29 @@
-import Header from './assets/components/Header.jsx';
-import Students from './assets/components/Students.jsx';
-import Card from './assets/components/Card.jsx';
-import Footer from './assets/components/Footer.jsx';
+import React from 'react'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './assets/components/Sidebar.jsx';
+import Home from './assets/components/Home.jsx';
+import StudentProfile from './assets/components/StudentProfile.jsx';
+//import Students from './assets/components/Students.jsx';
+// import Header from './assets/components/Header.jsx';
+// import Card from './assets/components/Card.jsx';
+// import Footer from './assets/components/Footer.jsx';
+
 
 function App() {
   return (
-    <>
-      <Header />
-      <div className="flex justify-center">
-      <Students name= "Nico" number= "202302598" age= {19} course="BSIT" year="3rd" />
-      <Students name= "Lenerd" number= "202300001" age= {19} course="BSIT" year="3rd" />
-      <Students name= "Geoffrey" number= "202300002" age= {19} course="BSIT" year="3rd" />
-      <Students name= "MJ" number= "202300003" age= {19} course="BSIT" year="3rd" />
-      <Students name= "Jommel" number= "202300004" age= {19} course="BSIT" year="3rd" />
+    <Router>
+      <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+        <Sidebar />
+
+        <main className="flex-1 p-6">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/students/:id*" element={<StudentProfile />} />
+          </Routes>
+        </main>
       </div>
-      <Card />
-      <Footer />
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
