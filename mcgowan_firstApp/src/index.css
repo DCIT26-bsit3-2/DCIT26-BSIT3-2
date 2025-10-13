@@ -1,0 +1,66 @@
+/* App layout styles */
+
+:root {
+	--sidebar-width: 16rem; /* 256px */
+}
+
+.app-container {
+	display: flex;
+	min-height: 100vh;
+}
+
+.app-sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: var(--sidebar-width);
+	height: 100vh;
+	overflow-y: auto;
+	background: #f3f4f6; /* tailwind gray-100 */
+	padding: 1rem;
+	box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+	z-index: 50;
+}
+
+.sidebar-nav {
+	background: #1f2937; /* tailwind gray-800 */
+	color: #fff;
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.sidebar-link {
+	display: block;
+	padding: 0.25rem 0.25rem;
+	color: inherit;
+	text-decoration: none;
+	border-radius: 0.25rem;
+}
+
+.sidebar-link:hover {
+	background: rgba(255,255,255,0.06);
+}
+
+.sidebar-link.active {
+	font-weight: 700;
+	background: rgba(255,255,255,0.08);
+}
+
+.main-content {
+	margin-left: var(--sidebar-width);
+	padding: 1rem;
+	flex: 1 1 auto;
+	min-height: 100vh;
+}
+
+.sidebar-title {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 0.75rem;
+}
+
+.students-heading {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0.5rem 0;
+}
