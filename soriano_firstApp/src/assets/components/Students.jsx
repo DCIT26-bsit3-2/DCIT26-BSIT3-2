@@ -8,6 +8,46 @@ function Students(props) {
             <p>Year Level: {props.yrLevel}</p>
             <p>Age: {props.age}</p>
             <p>Course: {props.course}</p>
+
+            {/* <div className="flex justify-between m-10 p-10">
+                <Students
+                    name="Geoffrey Soriano"
+                    studnum="202301671"
+                    yrLevel="3rd Year"
+                    age="20"
+                    course="BSIT"
+                />
+                <Students
+                    name="Geoffrey Soriano"
+                    studnum="202301671"
+                    yrLevel="3rd Year"
+                    age="20"
+                    course="BSIT"
+                />
+                <Students
+                    name="Jane Doe"
+                    studnum="202301672"
+                    yrLevel="3rd Year"
+                    age="20"
+                    course="BSIT"
+                />
+                <Students
+                    name="John Smith"
+                    studnum="202301673"
+                    yrLevel="3rd Year"
+                    age="21"
+                    course="BSIT"
+                />
+                <Students
+                    name="Alice Johnson"
+                    studnum="202301674"
+                    yrLevel="3rd Year"
+                    age="19"
+                    course="BSIT"
+                />
+            </div>
+            <Card />
+            <Footer /> */}
         </div>
     );
 }

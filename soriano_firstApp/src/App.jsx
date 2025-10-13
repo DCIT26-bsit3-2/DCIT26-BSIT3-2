@@ -1,4 +1,9 @@
-// import "./App.css";
+import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Sidebar from "./assets/components/Sidebar.jsx";
+import StudentProfile from "./assets/components/StudentProfile.jsx";
+import Home from "./assets/components/Home.jsx";
+
 import Header from "./assets/components/Header.jsx";
 import Footer from "./assets/components/Footer.jsx";
 import Card from "./assets/components/Card.jsx";
@@ -6,48 +11,21 @@ import Students from "./assets/components/Students.jsx";
 
 function App() {
     return (
-        <body className="min-h-screen flex-row">
-            <Header />
-            <div className="flex justify-between m-10 p-10">
-                <Students
-                    name="Geoffrey Soriano"
-                    studnum="202301671"
-                    yrLevel="3rd Year"
-                    age="20"
-                    course="BSIT"
-                />
-                <Students
-                    name="Geoffrey Soriano"
-                    studnum="202301671"
-                    yrLevel="3rd Year"
-                    age="20"
-                    course="BSIT"
-                />
-                <Students
-                    name="Jane Doe"
-                    studnum="202301672"
-                    yrLevel="3rd Year"
-                    age="20"
-                    course="BSIT"
-                />
-                <Students
-                    name="John Smith"
-                    studnum="202301673"
-                    yrLevel="3rd Year"
-                    age="21"
-                    course="BSIT"
-                />
-                <Students
-                    name="Alice Johnson"
-                    studnum="202301674"
-                    yrLevel="3rd Year"
-                    age="19"
-                    course="BSIT"
-                />
+        <BrowserRouter>
+            <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+                <Sidebar />
+
+                <main className="min-h-screen items-center ml-64 p-6 content-center">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route
+                            path="/student/:id"
+                            element={<StudentProfile />}
+                        />
+                    </Routes>
+                </main>
             </div>
-            <Card />
-            <Footer />
-        </body>
+        </BrowserRouter>
     );
 }
 
