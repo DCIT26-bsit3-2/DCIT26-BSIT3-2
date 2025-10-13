@@ -1,27 +1,26 @@
 import React from 'react';
-import header from './assets/components/header';
-import footer from './assets/components/footer';
-import cards from './assets/components/cards';
-import student from './assets/components/student';
-import '.index.css'
+import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./assets/components/Sidebar.jsx";
+import StudentProfile from "./assets/components/StudentProfile.jsx";
+import Home from "./assets/components/Home.jsx";
 
-function App(){
+function App() {
   return (
-    <>
-    <header/>
-    <br/>
-    <footer/>
-    <br/>
-    <student 
-    name ="john doe"
-    number ="654897"
-    age =" 17"
-    course =" BSIT"
-    year ="3rd year"
-    />
-    <hr/>
-    <cards />
-    </>
-  )
+    <Router>
+      <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+        {/* Sidebar */}
+        <Sidebar />
+
+        {/* Main Content */}
+        <main className="flex-1 p-6 ml-64 flex items-center justify-center min-h-screen">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/students/:id" element={<StudentProfile />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  );
 }
+
 export default App;
