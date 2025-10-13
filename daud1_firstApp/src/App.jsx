@@ -1,24 +1,24 @@
-import Header from './assets/components/Header'
-import Footer from './assets/components/Footer'
-import Students from './assets/components/Students'
-import Card from './assets/components/Card' 
+import React from "react";
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import Sidebar from "./assets/components/Sidebar.jsx";
+import StudentProfile from "./assets/components/StudentProfile.jsx";
+import Home from "./assets/components/Home.jsx";
 
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <hr></hr>
-      <div className="flex">
-      <Students name="Omar Raouf Daud" number="201310836" age="28" course="BSIT" year="3" />
-      <Students name="Jherecho Pilorin" number="201310837" age="27" course="BSCS" year="2" />  
-      <Students name="Jesmon Javier" number="201310838" age="26" course="BSIT" year="1" />  
-      <Students name="Jin Macol" number="201310839" age="25" course="BSDM" year="4" />  
-      <Students name="Marian Daud" number="201310840" age="24" course="BSBio" year="2" />    
-      </div>
-      <Card />  
-      <Footer />
-    </div>
+    <Router>
+        <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+          <Sidebar />
+
+          <main className="flex-1 p-6">
+              <Routes>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/students/:id" element={<StudentProfile />}></Route>
+              </Routes>
+          </main>
+        </div>
+    </Router>
   )
 }
 
