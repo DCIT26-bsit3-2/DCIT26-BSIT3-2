@@ -6,13 +6,13 @@ function StudentProfile() {
 
     const studentsData = {
         1: {
-            name: "Student 1",
+            name: "Geoffrey",
             age: 20,
             course: "BSIT",
             desc: "A diligent student.",
         },
         2: {
-            name: "Student 2",
+            name: "Lenerd",
             age: 21,
             course: "BSCS",
             desc: "An enthusiastic learner.",
