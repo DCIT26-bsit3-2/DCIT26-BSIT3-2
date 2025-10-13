@@ -1,61 +1,25 @@
-import Header from './assets/components/Header.jsx'
-import Footer from './assets/components/Footer.jsx'
-import Students from './assets/components/Students.jsx'
-import Card from './assets/components/Card.jsx'
+import React from 'react'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Sidebar from './assets/components/Sidebar.jsx';
+import StudentProfile from './assets/components/StudentProfile.jsx';
+import AnotherHome from './assets/components/AnotherHome.jsx';
   
 function App() {
 
   return (
-    <>
-      <Header />
+    <Router>
+      <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
 
-      <div className='flex' padding='10px' gap='10px'>
-      <Students 
-      name="Jherecho Pilorin"
-      number="2023-12345"
-      age="20"
-      course="BSIT"
-      year="3rd Year"
-    />
-
-     <Students 
-      name="Omar Daud"
-      number="2023-12345"
-      age="20"
-      course="BSIT"
-      year="3rd Year"
-    />
-
-     <Students 
-      name="Jesmon Javier"
-      number="2023-12345"
-      age="20"
-      course="BSIT"
-      year="3rd Year"
-    />
-
-     <Students 
-      name="Nathaniel Bakx"
-      number="2023-12345"
-      age="20"
-      course="BSIT"
-      year="3rd Year"
-    />
-
-     <Students 
-      name="Jhezrel Pilorin"
-      number="2023-12345"
-      age="20"
-      course="BSIT"
-      year="3rd Year"
-    />
+        <Sidebar />
         
-        </div>
-    <Card />    
-
-
-      <Footer />
-    </>
+        <main className="flex-1 p-6">
+          <Routes>
+            <Route path="/" element={<AnotherHome />} />
+            <Route path="/students/:id" element={<StudentProfile />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   )
 }
 
