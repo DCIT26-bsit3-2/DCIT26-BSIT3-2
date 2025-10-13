@@ -1,60 +1,26 @@
-import Header from './assets/components/Header.jsx'
-import Footer from './assets/components/Footer.jsx'
-import Students from './assets/components/Students.jsx'
-import Card from './assets/components/Card.jsx'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./assets/components/Sidebar.jsx";
+import StudentProfile from "./assets/components/StudentProfile.jsx";
+import Home from "./assets/components/AnotherHome.jsx";
 
 function App() {
-
   return (
-    <>
-      <div className='flex justify-between flex-col min-h-screen'>
-      <Header/>
-      <div className="flex flex-wrap justify-center">
-      <Students
-      name="Messiahlyn Mae G. Mabilangan"
-      number="202201860"
-      age={21}
-      course="BSIT"
-      year={3}
-      />
+    <Router>
+      <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+        {/* Sidebar */}
+        <Sidebar/>
 
-      <Students
-      name="Mhar G. Granado"
-      number="202302603"
-      age={20}
-      course="BSIT"
-      year={3}
-      />
-
-      <Students
-      name="Lanz Michael Casino"
-      number="202300430"
-      age={21}
-      course="BSIT"
-      year={3}
-      />
-
-      <Students
-      name="Yoshikazu C. Nagahama"
-      number="202300649"
-      age={20}
-      course="BSIT"
-      year={3}
-      />
-
-      <Students
-      name="Stephanie April Romo"
-      number="202303667"
-      age={21}
-      course="BSIT"
-      year={3}
-      />
+        {/* Main Content */}
+        <main className="flex-1 p-6">
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/students/:id" element={<StudentProfile/>} />
+          </Routes>
+        </main>
       </div>
-      <Card/>
-      <Footer/>
-      </div>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
