@@ -2,7 +2,7 @@ import React from 'react'
 
 function Students(students) {
   return (
-    <div className="text-center p-4 bg-gray-500 text-white justify-content-center align-items-center max-w-md mx-auto my-4 shadow-lg mgt-4 rounded-lg ">
+    <div className="text-center p-4 bg-gray-500 text-white max-w-md mx-auto my-4 shadow-lg mt-4 rounded-xl">
       <p> STUDENT NAME: {students.name} </p>
       <p> STUDENT NUMBER: {students.number}</p>
       <p> AGE: {students.age}</p>

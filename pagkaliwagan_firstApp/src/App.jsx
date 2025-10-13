@@ -1,78 +1,29 @@
-import Header from './assets/components/Header.jsx'
-import Footer from './assets/components/Footer.jsx'
-import Students from './assets/components/Students.jsx'
-import Cards from './assets/components/Cards.jsx'
-
-
-
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './assets/components/Home.jsx';
+import Sidebar from './assets/components/Sidebar.jsx';
+import StudentProfile from './assets/components/StudentProfile.jsx';
 
 
 function App() {
   return (
-    <>
-      <div classname="bg-gray-400">
-      <Header />
-      
-      <div className="flex flex-wrap justify-center   p-4 gap-4">
-      <Students 
-        name = "Kian Lhei"
-        number = "202301095"
-        age = "19"
-        course = "BSIT"
-        year = "3rd Year"
+    <Router>
+    <div className='flex min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100'>
+        {/* Sidebar */}
 
-
-      />
-
-      <Students 
-        name = "Chars Sampaga"
-        number = "202322222"
-        age = "20"
-        course = "BSIT"
-        year = "3rd Year"
-
-        
-      />
-
-      <Students 
-        name = "Jimuel Clidoro"
-        number = "202301095"
-        age = "19"
-        course = "BSIT"
-        year = "3rd Year"
-
-        
-      />
-
-      <Students 
-        name = "Jesmon Javier"
-        number = "202301095"
-        age = "19"
-        course = "BSIT"
-        year = "3rd Year"
-
-        
-      />
-
-      <Students 
-        name = "Mike Casaverde"
-        number = "202301095"
-        age = "19"
-        course = "BSIT"
-        year = "3rd Year"
-
-        
-      />
+        <Sidebar />
+        {/* Main Content */}
+        <main className='flex-1 p-6 bg-gray-600'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/students/:id' element={<StudentProfile />} />
+          </Routes>
+        </main>
       </div>
-      
-      
-      <Cards />
-     
-
-      <Footer />
-      </div>
-    </>
-  )
+     </Router>
+  );
 }
 
 export default App
+
+ 
