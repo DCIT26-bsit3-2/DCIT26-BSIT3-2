@@ -1,65 +1,28 @@
-import Header from './assets/components/Header.jsx'
-import Footer from './assets/components/Footer.jsx'
-import Student from './assets/components/Student.jsx'
-import Card from './assets/components/Card.jsx'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./assets/components/Sidebar.jsx";
+import StudentProfile from "./assets/components/StudentProfile.jsx";
+import Home from "./assets/components/AnotherHome.jsx";
 
 
 function App() {
   return (
-    <>
+   <Router>
+    <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+      {/* Sidebar */}
+      <Sidebar />
 
-<div className='flex justify-between flex-col min-h-screen'>
-<Header />
-
-<div className="flex flex-wrap justify-center">
-<Student
-name="Mhar Granado"
-number="202302603"
-age={20}
-course="BSIT"
-year={3}
-/>
-
-<Student
-name="Curlh Joseph Golez"
-number="202303690"
-age={21}
-course="BSIT"
-year={3}
-/>
-
-<Student
-name="Messiahlyn Mae Mabilangan"
-number="202201860"
-age={21}
-course="BSIT"
-year={3}
-/>
-
-<Student
-name="Stephanie April Romo"
-number="202303667"
-age={21}
-course="BSIT"
-year={3}
-/>
-
-<Student
-name="Lanz Michael Casino"
-number="202300430"
-age={21}
-course="BSIT"
-year={3}
-/>
-</div>
-
-<Card />
-
-<Footer />
-</div>
-</>
+      {/* Main Content */}
+      <main className="flex-1 p-6">
+        <Routes>
+          <Route path="/"element={<Home />}/>
+           <Route path="/students/:id" element={<StudentProfile />}/>
+        </Routes>
+      </main>
+    </div>
+   </Router>
     
-  )
+  );
 }
 
-export default App
+export default App;
