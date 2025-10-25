@@ -1,0 +1,23 @@
+# Ignore backend dependencies
+backend/node_modules/
+
+# Ignore frontend dependencies
+frontend/node_modules/
+
+# --- MOST IMPORTANT: IGNORE SECRET FILES ---
+backend/.env
+.env
+
+# Ignore build output from frontend
+frontend/dist/
+
+# Ignore IDE and OS files
+.vscode/
+.DS_Store
+
+# Ignore log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
